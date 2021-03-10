@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.g_to_interact_with {
+  fill: transparent;
+}
+
+path {
+  stroke-width: 6;
+}
+
+.container {
+  margin: 50px auto;
+  width: 50%;
+}
+
+#shadow {
+  pointer-events: none;
+}
