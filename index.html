@@ -1,41 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12c_02_04_own configurator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <header>
-        <h1>Design your own teddybear!</h1>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Teddybear configurator</title>
+  </head>
+  <body>
+    <h1>Customize your own teddy bear</h1>
+    <div id="configurator">
+      <div id="product-preview">
+        <!-- TODO: add all feature image layers -->
+        <div id="teddybear_basic"></div>
+        <img
+          src="items/sunglasses1.png"
+          alt=""
+          class="hide"
+          id="sunglasses"
+          data-feature="sunglasses"
+        />
+        <img
+          src="items/bow1.png"
+          alt=""
+          class="hide"
+          data-feature="bow"
+          id="bow"
+        />
+        <img
+          src="items/heart1.png"
+          alt=""
+          class="hide"
+          data-feature="heart"
+          id="heart"
+        />
+        <img
+          src="items/mustache1.png"
+          alt=""
+          class="hide"
+          data-feature="mustache"
+          id="mustache"
+        />
+      </div>
+      <div id="options">
+        Available features
+        <figure class="option" data-feature="sunglasses">
+          <img src="items/feature_sunglasses.png" alt="Sunglasses" />
+          <figcaption>Sunglasses</figcaption>
+        </figure>
+        <figure class="option" data-feature="bow">
+          <img src="items/feature_bow.png" alt="bow" />
+          <figcaption>Bow</figcaption>
+        </figure>
+        <figure class="option" data-feature="heart">
+          <img src="items/feature_heart.png" alt="Heart" />
+          <figcaption>Heart</figcaption>
+        </figure>
+        <figure class="option" data-feature="mustache">
+          <img src="items/feature_mustache.png" alt="Mustache" />
+          <figcaption>Mustache</figcaption>
+        </figure>
+      </div>
+      <div id="selected">
+        Selected features
+        <ul>
+          <!-- featureElements are added here! -->
+        </ul>
+      </div>
+    </div>
 
-    <p>Instructions:<br>
-        Change the color of your teddybear by clicking on any part of the bear, and then choose a color.<br>
-        Add and remove features to/from your teddybear by clicken the items on the right<br>
-        If you want to change the color of the feature, just click the feature and then the color you want to choose
-    </p>
-
-    <svg viewBox="0 0 842 50">
-        <rect class="color_btn" x="0" width="50" height="50" fill="#1D5C4A" />
-        <rect class="color_btn" x="50" width="50" height="50" fill="#8ADFC7" />
-        <rect class="color_btn" x="100" width="50" height="50" fill="#45D9AF" />
-        <rect class="color_btn" x="150" width="50" height="50" fill="#375950" />
-        <rect class="color_btn" x="200" width="50" height="50" fill="#35A686" />
-        <rect class="color_btn" x="250" width="50" height="50" fill="#225B5C" />
-        <rect class="color_btn" x="300" width="50" height="50" fill="#95DEDF" />
-        <rect class="color_btn" x="350" width="50" height="50" fill="#3C5959" />
-        <rect class="color_btn" x="400" width="50" height="50" fill="#3EA6A8" />
-        <rect class="color_btn" x="450" width="50" height="50" fill="#50D6D9" />
-        <rect class="color_btn" x="500" width="50" height="50" fill="#000000" />
-      </svg>
-
-    <section class="container">
-    </section>
-
+    <p>Click on an area and pick a color below to see the result:</p>
+    <svg viewBox="0 0 1000 300">
+      <rect class="color_btn" width="100" height="100" fill="#7A4520"></rect>
+      <rect
+        class="color_btn"
+        x="110"
+        width="100"
+        height="100"
+        fill="#F9B98B"
+      ></rect>
+      <rect
+        class="color_btn"
+        x="220"
+        width="100"
+        height="100"
+        fill="#F78D40"
+      ></rect>
+      <rect
+        class="color_btn"
+        x="330"
+        width="100"
+        height="100"
+        fill="#785943"
+      ></rect>
+      <rect
+        class="color_btn"
+        x="440"
+        width="100"
+        height="100"
+        fill="#C47033"
+      ></rect>
+      <rect
+        class="color_btn"
+        x="550"
+        width="100"
+        height="100"
+        fill="#7A4921"
+      ></rect>
+      <rect
+        class="color_btn"
+        x="660"
+        width="100"
+        height="100"
+        fill="#FFC391"
+      ></rect>
+      <rect
+        class="color_btn"
+        x="770"
+        width="100"
+        height="100"
+        fill="#F79443"
+      ></rect>
+      <rect
+        class="color_btn"
+        x="890"
+        width="100"
+        height="100"
+        fill="#C77736"
+      ></rect>
+    </svg>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -1,21 +1,188 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
+svg {
+  width: 80%;
+}
+
+#shadow_Image {
+  pointer-events: none;
 }
 
 .g_to_interact_with {
   fill: transparent;
+  cursor: pointer;
 }
 
 path {
-  stroke-width: 6;
+  stroke-width: 2;
 }
 
-.container {
-  margin: 50px auto;
-  width: 50%;
+h1 {
+  font-family: "Montserrat";
+  color: rgb(163, 117, 57);
+  text-shadow: 2px 2px #000000;
 }
 
-#shadow {
-  pointer-events: none;
+p {
+  font-family: "Moonflower";
+  font-size: 25px;
+  color: rgb(163, 117, 57);
+  font-weight: 600;
+}
+
+.color_btn {
+  cursor: pointer;
+}
+
+#configurator {
+  display: grid;
+  grid-template-areas:
+    "product options"
+    "features features";
+  gap: 1em;
+}
+
+#product-preview {
+  grid-area: product;
+  box-shadow: 3px 3px 8px #ddd;
+  border-radius: 1em;
+  position: relative;
+  transition: opacity ease-in 0.5s;
+}
+
+/* #product-preview img {
+  position: absolute;
+  width: 30%;
+  height: auto;
+  top: 0;
+  left: 0;
+} */
+
+#product-preview .hide {
+  opacity: 0;
+}
+
+#product-preview img.basic {
+  position: relative;
+}
+
+/* IMAGES ON THE BEAR */
+#sunglasses {
+  position: absolute;
+  width: 18%;
+  height: auto;
+  top: 7.5vw;
+  left: 15.5vw;
+}
+
+#bow {
+  position: absolute;
+  width: 15%;
+  height: auto;
+  top: 3vw;
+  left: 16.2vw;
+}
+
+#heart {
+  position: absolute;
+  width: 18%;
+  height: auto;
+  top: 15vw;
+  left: 15.5vw;
+}
+
+#mustache {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  top: 10.5vw;
+  left: 17.5vw;
+}
+
+#options {
+  grid-area: options;
+  box-shadow: 3px 3px 8px #ddd;
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#options .option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  color: #aaa;
+}
+
+#options .option:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+#options .option.chosen {
+  text-decoration: underline;
+  color: #000;
+}
+
+#options .option img {
+  width: 4vw;
+  height: auto;
+}
+
+#options .option figcaption {
+  font-size: 20px;
+}
+
+#selected {
+  grid-area: features;
+}
+
+#selected ul {
+  list-style-type: none;
+}
+
+#selected ul li {
+  display: inline-block;
+}
+
+#selected ul li img {
+  width: 3em;
+}
+
+/* Animation classes */
+
+.animate-feature-in {
+  /* TODO: Create animation for adding a feature */
+  animation-name: move_in;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+}
+
+@keyframes move_in {
+  0% {
+    transform: translate(var(--diffx), var(--diffy)) scale(0);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.animate-feature-out {
+  animation-name: move_out;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-direction: reverse;
+  /* TODO: Create animation for removing a feature */
+}
+
+@keyframes move_out {
+  0% {
+    transform: translate(var(--diffx), var(--diffy)) scale(0);
+  }
+
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
 }
